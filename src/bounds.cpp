@@ -440,6 +440,8 @@ namespace bx
 		if (0.0f > tmax
 		||  tmin > tmax)
 		{
+			if (NULL != _hit)
+				_hit->pos = getPointAt(_ray, tmin);
 			return false;
 		}
 
